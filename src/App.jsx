@@ -1,5 +1,5 @@
 import "./App.css";
-import react, { useState } from "react";
+import { useState } from "react";
 import { Box, createTheme, Stack, ThemeProvider } from "@mui/material";
 import Add from "./components/Add";
 import Feed from "./components/Feed";
