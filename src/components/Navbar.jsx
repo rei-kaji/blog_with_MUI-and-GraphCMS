@@ -50,7 +50,7 @@ function Navbar() {
     <AppBar position="sticky" color="primary">
       <StyledToolbar>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
-          Note with MUI
+          Blog with MUI & GraphCMS
         </Typography>
         <Pets sx={{ display: { xs: "block", sm: "none" } }} />
         <Search>
