@@ -44,7 +44,7 @@ const UserBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-function Navbar() {
+function Navbar({ setSearchWords }) {
   const [open, setOpen] = useState(false);
   return (
     <AppBar position="sticky" color="primary">
@@ -57,6 +57,9 @@ function Navbar() {
           <InputBase
             sx={{ color: "black" }}
             placeholder="search..."
+            onChange={(e) => {
+              setSearchWords(e.target.value);
+            }}
           ></InputBase>
         </Search>
         <Icons>

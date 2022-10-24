@@ -27,6 +27,7 @@ function App() {
   const changeMode = (mode) => {
     setMode(mode === "light" ? "dark" : "light");
   };
+  const [searchWords, setSearchWords] = useState("");
   return (
     <ThemeProvider theme={darkTheme}>
       <Box
@@ -34,10 +35,10 @@ function App() {
         color={"text.primary"}
         sx={{ margin: 0 }}
       >
-        <Navbar />
+        <Navbar setSearchWords={setSearchWords} />
         <Stack direction="row" spacing={2} justifyContent="space-between">
           <Sidebar mode={mode} setMode={changeMode} />
-          <Feed />
+          <Feed searchWords={searchWords} />
           <Rightbar />
         </Stack>
         <Add />
