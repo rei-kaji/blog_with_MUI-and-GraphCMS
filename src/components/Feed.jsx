@@ -39,8 +39,10 @@ function Feed({ searchWords }) {
       {data.posts
         .filter((post) => {
           const isMatched =
-            post.title.indexOf(searchWords) !== -1 ||
-            post.content.indexOf(searchWords) !== -1;
+            post.title.toLowerCase().indexOf(searchWords.toLowerCase()) !==
+              -1 ||
+            post.content.toLowerCase().indexOf(searchWords.toLowerCase()) !==
+              -1;
           // console.log(isMatched);
           return isMatched;
         })
