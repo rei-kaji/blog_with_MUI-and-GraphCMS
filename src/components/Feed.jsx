@@ -41,7 +41,7 @@ function Feed({ searchWords }) {
           const isMatched =
             post.title.indexOf(searchWords) !== -1 ||
             post.content.indexOf(searchWords) !== -1;
-          console.log(isMatched);
+          // console.log(isMatched);
           return isMatched;
         })
         .map((post) => (
